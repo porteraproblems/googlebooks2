@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import Saved from "./pages/Saved";
 import NoMatch from "./pages/NoMatch";
@@ -7,7 +7,7 @@ import Nav from "./components/Nav";
 
 function App() {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <Router>
       <div>
         <Nav />
         <Switch>
@@ -16,7 +16,7 @@ function App() {
           <Route component={NoMatch} />
         </Switch>
       </div>
-    </BrowserRouter>
+    </Router>
   );
 }
 
